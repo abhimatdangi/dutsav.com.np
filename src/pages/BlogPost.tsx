@@ -98,45 +98,45 @@ const BlogPost = () => {
                 <ReactMarkdown 
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    h2: ({node, ...props}) => (
+                    h2: (props) => (
                       <h2 className="text-2xl font-semibold text-primary mt-10 mb-4 pb-2 border-b border-border" {...props} />
                     ),
-                    h3: ({node, ...props}) => (
+                    h3: (props) => (
                       <h3 className="text-xl font-semibold text-primary mt-8 mb-3" {...props} />
                     ),
-                    p: ({node, ...props}) => (
+                    p: (props) => (
                       <p className="text-muted-foreground leading-relaxed mb-4" {...props} />
                     ),
-                    ul: ({node, ...props}) => (
+                    ul: (props) => (
                       <ul className="list-disc list-inside space-y-2 mb-4 text-muted-foreground" {...props} />
                     ),
-                    ol: ({node, ...props}) => (
+                    ol: (props) => (
                       <ol className="list-decimal list-inside space-y-2 mb-4 text-muted-foreground" {...props} />
                     ),
-                    li: ({node, ...props}) => (
+                    li: (props) => (
                       <li className="text-muted-foreground" {...props} />
                     ),
-                    strong: ({node, ...props}) => (
+                    strong: (props) => (
                       <strong className="font-semibold text-primary" {...props} />
                     ),
-                    table: ({node, ...props}) => (
+                    table: (props) => (
                       <div className="overflow-x-auto my-6">
                         <table className="min-w-full border border-border rounded-lg overflow-hidden" {...props} />
                       </div>
                     ),
-                    thead: ({node, ...props}) => (
+                    thead: (props) => (
                       <thead className="bg-muted" {...props} />
                     ),
-                    th: ({node, ...props}) => (
+                    th: (props) => (
                       <th className="px-4 py-3 text-left text-sm font-semibold text-primary border-b border-border" {...props} />
                     ),
-                    td: ({node, ...props}) => (
+                    td: (props) => (
                       <td className="px-4 py-3 text-sm text-muted-foreground border-b border-border" {...props} />
                     ),
-                    blockquote: ({node, ...props}) => (
+                    blockquote: (props) => (
                       <blockquote className="border-l-4 border-accent pl-4 italic text-muted-foreground my-4" {...props} />
                     ),
-                    code: ({node, className, children, ...props}) => {
+                    code: ({ className, children, ...props }) => {
                       const isInline = !className;
                       if (isInline) {
                         return (
@@ -151,7 +151,7 @@ const BlogPost = () => {
                         </code>
                       );
                     },
-                    hr: ({node, ...props}) => (
+                    hr: (props) => (
                       <hr className="my-8 border-border" {...props} />
                     ),
                   }}
