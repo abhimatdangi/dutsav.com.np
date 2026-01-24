@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Apple-inspired minimal theme with maroon & blue */
+    --background: 40 20% 96%;
+    --foreground: 240 100% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 100% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 100% 13%;
+
+    /* Primary - Deep Blue */
+    --primary: 240 98% 13%;
+    --primary-foreground: 40 20% 96%;
+
+    /* Secondary - Maroon */
+    --secondary: 0 61% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 15% 92%;
+    --muted-foreground: 240 10% 40%;
+
+    /* Accent - Maroon */
+    --accent: 0 61% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 240 98% 13%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --maroon: 0 61% 47%;
+    --maroon-light: 0 55% 55%;
+    --blue-deep: 240 98% 13%;
+    --blue-light: 240 80% 25%;
+    --cream: 40 20% 96%;
+    --cream-dark: 40 15% 92%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Font */
+    --font-matter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .dark {
+    --background: 240 50% 5%;
+    --foreground: 40 20% 96%;
+    --card: 240 50% 8%;
+    --card-foreground: 40 20% 96%;
+    --popover: 240 50% 8%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 0 61% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 98% 13%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 240 30% 15%;
+    --muted-foreground: 40 10% 65%;
+    --accent: 0 61% 47%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 40 20% 96%;
+    --border: 240 30% 20%;
+    --input: 240 30% 20%;
+    --ring: 0 61% 47%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: var(--font-matter);
+  }
+
+  html {
+    font-family: var(--font-matter);
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-matter);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-matter);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  p, span, a, button, input, textarea, select, label {
+    font-family: var(--font-matter);
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  .text-maroon {
+    color: hsl(var(--maroon));
+  }
+
+  .bg-maroon {
+    background-color: hsl(var(--maroon));
+  }
+
+  .text-blue-deep {
+    color: hsl(var(--blue-deep));
+  }
+
+  .bg-blue-deep {
+    background-color: hsl(var(--blue-deep));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .bg-cream-dark {
+    background-color: hsl(var(--cream-dark));
+  }
+
+  /* Apple-style card */
+  .apple-card {
+    @apply bg-card rounded-2xl p-8 border border-border/50;
+    box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.05);
+  }
+
+  .apple-card:hover {
+    box-shadow: 0 8px 40px -8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Smooth hover lift */
+  .hover-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-delay-1 {
+    animation: fadeIn 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-delay-3 {
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
