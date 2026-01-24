@@ -158,7 +158,7 @@ const ContactPage = () => {
                       className="block w-full h-full"
                     >
                       <img
-                        src="/map-location.png"
+                        src={`${import.meta.env.BASE_URL}map-location.png`}
                         alt="Office Location - Gobinda Bhawan, Pepsicola, Kathmandu"
                         className="w-full h-full object-cover"
                       />

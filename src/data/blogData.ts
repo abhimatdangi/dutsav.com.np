@@ -1336,7 +1336,7 @@ Business registration in Nepal, while involving multiple steps, has become incre
     category: 'Business Registration',
     author: 'D. Utsav',
     readTime: '20 min read',
-    image: '/bizreg.webp',
+    image: '/dutsav.com.np/bizreg.webp',
   },
 ];
 

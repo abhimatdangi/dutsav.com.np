@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: 'Utsav Dangi',
     role: 'Consultant',
-    image: '/UD.jpeg',
+    image: `${import.meta.env.BASE_URL}UD.jpeg`,
     linkedin: 'https://www.linkedin.com/in/utsav-dangi-ca/',
     bio: 'Leading financial consulting services with expertise in tax advisory, audit, and business compliance.',
     qualifications: ['Chartered Accountant', 'Tax Expert', 'Business Advisor'],
@@ -17,7 +17,7 @@ const teamMembers = [
   {
     name: 'Nabin Kumar BK',
     role: 'Advisor',
-    image: '/Nabin.webp',
+    image: `${import.meta.env.BASE_URL}Nabin.webp`,
     linkedin: 'https://www.linkedin.com/in/nabin-kumar-bk1-nkbk19/',
     bio: 'Specialized in financial analysis, regulatory compliance, and strategic business advisory.',
     qualifications: ['Financial Analyst', 'Compliance Specialist', 'Strategic Advisor'],
