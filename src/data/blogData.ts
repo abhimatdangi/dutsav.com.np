@@ -95,15 +95,6 @@ Key changes to employment regulations:
 - New provisions for remote work arrangements
 - Strengthened worker protection measures
 
-## Compliance Deadlines
-
-| Compliance | Previous Deadline | New Deadline |
-|------------|-------------------|--------------|
-| Income Tax Return | Poush end | Magh end |
-| VAT Return | 25th of following month | Same |
-| TDS Deposit | 25th of following month | 15th of following month |
-| Annual Audit | Within 6 months | Within 4 months |
-
 ## Impact on Businesses
 
 ### Small and Medium Enterprises (SMEs)

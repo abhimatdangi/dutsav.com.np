@@ -55,15 +55,15 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a 
-            href="#home" 
-            className="flex items-center gap-3" 
-            onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
+          <Link 
+            to="/"
+            className="flex items-center gap-3"
+            onClick={() => setIsMobileMenuOpen(false)}
           >
-            <span className="font-semibold text-primary text-lg">
+            <span className="font-semibold text-primary text-xl">
               D. Utsav & Associates
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
